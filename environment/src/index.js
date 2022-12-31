@@ -13,7 +13,7 @@ const created = ({scene}) => {
 
 root.render(
     <Canvas
-        shadows
+        shadows={false}
         camera={ {
             fov: 45,
             near: 0.1,
@@ -22,7 +22,7 @@ root.render(
         } }
         onCreated={created}
     >
-        <color args={['#ff0000']} attach="background" />
+        {/* <color args={['#ff0000']} attach="background" /> */}
         <Experience />
     </Canvas>
 )
