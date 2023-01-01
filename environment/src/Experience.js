@@ -61,7 +61,6 @@ export default function Experience()
         />
         <Environment
             background
-            preset='sunset'
             // files={[
             //     './environmentMaps/1/px.jpg',
             //     './environmentMaps/1/nx.jpg',
@@ -70,7 +69,16 @@ export default function Experience()
             //     './environmentMaps/1/pz.jpg',
             //     './environmentMaps/1/nz.jpg',
             // ]}
-        />
+        >
+            <color args={['blue']} attach="background"/>
+            <mesh 
+            position-z={-5}
+            scale={10}
+            >
+                <planeGeometry/>
+                <meshBasicMaterial color='red'/>
+            </mesh>
+        </Environment>
 
         {/* <directionalLight 
             position={ sunPosition }
@@ -107,7 +115,7 @@ export default function Experience()
         <Sky
             sunPosition={sunPosition}
         /> */}
-
+        
         <mesh castShadow position-x={ - 2 } >
             <sphereGeometry />
             <meshStandardMaterial color="orange" envMapIntensity={envMapIntensity} />
